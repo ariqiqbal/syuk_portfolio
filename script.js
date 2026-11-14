@@ -59,12 +59,7 @@
     socials.map((k) => `<a href="${S[k]}" target="_blank" rel="noopener">${ICON[k]}<span>${LINKNAME[k]}</span></a>`).join("");
 
   // ---------- PHOTOS ----------
-  const KEY = "syukran-portfolio-photos";
-  let saved = {};
-  try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
-
   function srcFor(key) {
-    if (saved[key]) return saved[key];
     if (key.startsWith("gallery.")) return (S.gallery[+key.split(".")[1]] || {}).image;
     return S.photos[key];
   }
@@ -78,43 +73,6 @@
     img.src = src;
   }
   document.querySelectorAll(".photo").forEach(paint);
-
-  // ---------- PHOTO EDITOR (local preview) ----------
-  let target = null;
-  const pick = $("#file-pick");
-  $("#edit-toggle").onclick = () => {
-    const on = document.body.classList.toggle("editing");
-    $("#edit-toggle").textContent = on ? "✓ Done" : "✎ Edit photos";
-  };
-  document.addEventListener("click", (e) => {
-    const el = e.target.closest(".photo");
-    if (!el || !document.body.classList.contains("editing")) return;
-    e.preventDefault(); target = el; pick.click();
-  });
-  pick.onchange = () => {
-    const f = pick.files[0]; if (!f || !target) return;
-    shrink(f, (data) => {
-      saved[target.dataset.photo] = data;
-      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) { alert("Photo too big to save. It shows until refresh."); }
-      paint(target); pick.value = "";
-    });
-  };
-  // resize big photos so they fit in browser storage
-  function shrink(file, cb) {
-    const r = new FileReader();
-    r.onload = () => {
-      const img = new Image();
-      img.onload = () => {
-        const max = 1000, k = Math.min(1, max / Math.max(img.width, img.height));
-        const c = document.createElement("canvas");
-        c.width = img.width * k; c.height = img.height * k;
-        c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
-        cb(c.toDataURL("image/jpeg", 0.85));
-      };
-      img.src = r.result;
-    };
-    r.readAsDataURL(file);
-  }
 
   // ---------- NAV + ANIMATION ----------
   const burger = $(".hamburger"), menu = $(".mobile-menu");

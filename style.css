@@ -117,16 +117,6 @@ footer .nav-links { justify-content: center; margin-bottom: 1.5rem; }
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s, transform .8s; }
 .reveal.show { opacity: 1; transform: none; }
 
-/* PHOTO EDITOR */
-#edit-toggle { position: fixed; right: 1rem; bottom: 1rem; z-index: 50; padding: .7rem 1.1rem;
-  border-radius: 2rem; border: 0; background: #111; color: #fff; font: 500 .85rem Poppins; cursor: pointer;
-  box-shadow: 0 6px 20px rgba(0,0,0,.2); }
-body.editing #edit-toggle { background: #e2483d; }
-body.editing .photo { cursor: pointer; outline: 3px dashed #e2483d; outline-offset: 4px; }
-body.editing .photo::before { content: "Click to change"; position: absolute; left: 50%; bottom: 10px;
-  transform: translateX(-50%); background: rgba(0,0,0,.7); color: #fff; font-size: .75rem;
-  padding: .3rem .7rem; border-radius: 1rem; white-space: nowrap; z-index: 2; }
-
 /* RESPONSIVE */
 @media (max-width: 1000px) {
   .hero, .about-wrap, .skills { flex-direction: column; }
