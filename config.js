@@ -84,7 +84,7 @@ window.SITE = {
     {
       id: "street", type: "photo",
       title: "Street Photography", caption: "Everyday moments",
-      image: "images/1.jpg",
+      image: "images/work1.jpg",
       folder: "images/street", count: 7,
     },
     {
