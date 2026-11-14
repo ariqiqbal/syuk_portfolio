@@ -1,0 +1,111 @@
+/* ============================================================
+   PREMIUM EFFECTS — cursor, text reveal, parallax, grain, dark mode
+   Turn things on/off at the top of effects.js
+   ============================================================ */
+
+body { transition: background-color .5s ease, color .5s ease; }
+
+/* ---------- FILM GRAIN ---------- */
+.fx-grain {
+  position: fixed; inset: -100%; width: 300%; height: 300%;
+  pointer-events: none; z-index: 9998; opacity: .055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: fxGrain 1s steps(6) infinite;
+}
+body.dark .fx-grain { opacity: .08; }
+@keyframes fxGrain {
+  0% { transform: translate(0, 0); }   20% { transform: translate(-3%, 2%); }
+  40% { transform: translate(2%, -3%); } 60% { transform: translate(-2%, -1%); }
+  80% { transform: translate(3%, 3%); }  100% { transform: translate(0, 0); }
+}
+
+/* ---------- CUSTOM CURSOR ---------- */
+body.fx-cursor-on, body.fx-cursor-on a, body.fx-cursor-on button { cursor: none; }
+.fx-dot, .fx-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+  border-radius: 50%; transform: translate(-50%, -50%); }
+.fx-dot { width: 6px; height: 6px; background: #111; transition: opacity .2s; }
+.fx-ring { width: 38px; height: 38px; border: 1px solid rgba(17,17,17,.45);
+  display: grid; place-items: center; font: 600 .7rem Poppins, sans-serif; letter-spacing: .06em;
+  color: transparent; text-transform: uppercase;
+  transition: width .35s cubic-bezier(.2,.8,.2,1), height .35s cubic-bezier(.2,.8,.2,1),
+              background .3s, border-color .3s, color .2s; }
+.fx-ring.hover { width: 56px; height: 56px; border-color: rgba(17,17,17,.8); }
+.fx-ring.label { width: 86px; height: 86px; background: #111; border-color: #111; color: #fff; }
+.fx-ring.label + .fx-dot, .fx-dot.hide { opacity: 0; }
+.fx-ring.down { transform: translate(-50%, -50%) scale(.85); }
+body.dark .fx-dot { background: #f2f2f2; }
+body.dark .fx-ring { border-color: rgba(242,242,242,.45); }
+body.dark .fx-ring.hover { border-color: rgba(242,242,242,.85); }
+body.dark .fx-ring.label { background: #f2f2f2; border-color: #f2f2f2; color: #111; }
+
+/* ---------- TEXT REVEAL ---------- */
+.fx-split .fx-w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; }
+.fx-split .fx-w > span { display: inline-block; transform: translateY(105%);
+  transition: transform .9s cubic-bezier(.2,.8,.2,1); transition-delay: calc(var(--i) * 70ms); }
+.fx-split.fx-in .fx-w > span { transform: none; }
+.fx-fade { opacity: 0; transform: translateY(14px); transition: opacity .9s ease .25s, transform .9s ease .25s; }
+.fx-fade.fx-in { opacity: 1; transform: none; }
+
+/* ---------- PARALLAX ---------- */
+.fx-par { will-change: transform; }
+
+/* ---------- THEME TOGGLE ---------- */
+.fx-theme { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #353535; background: transparent;
+  display: grid; place-items: center; cursor: pointer; transition: background .3s, transform .4s; flex-shrink: 0; }
+.fx-theme:hover { background: #353535; }
+.fx-theme:hover svg { stroke: #fff; }
+.fx-theme svg { width: 18px; height: 18px; fill: none; stroke: #111; stroke-width: 2; stroke-linecap: round; transition: stroke .3s; }
+.fx-theme:active { transform: rotate(40deg) scale(.9); }
+.nav .fx-right { display: flex; align-items: center; gap: 1.2rem; }
+
+/* ---------- DARK MODE ---------- */
+body.dark { background: #0d0d0d; color: #ececec; }
+body.dark .small, body.dark .role, body.dark .about-text, body.dark .tile p, body.dark .skill p,
+body.dark .skill-box h3, body.dark #copy, body.dark .work-head p, body.dark .empty-msg,
+body.dark .open-hint, body.dark .card p { color: #a9a9a9; }
+body.dark .nav-links a:hover { color: #fff; }
+body.dark .mobile-menu { background: #0d0d0d; }
+body.dark .hamburger span { background: #ececec; }
+body.dark .card, body.dark .skill-box, body.dark .tile, body.dark .contact-box,
+body.dark .v-item { border-color: #2a2a2a; background: #141414; }
+body.dark .tile:hover { box-shadow: 0 14px 40px rgba(0,0,0,.6); }
+body.dark .photo { background-color: #1c1c1c; }
+body.dark .photo.empty { background-image: linear-gradient(135deg, #1e1e1e, #262626); }
+body.dark .photo.empty::after { color: #666; }
+body.dark .tag { color: #9a9a9a; border-color: #3a3a3a; }
+body.dark .open-hint { color: #ddd; }
+body.dark .btn { border-color: #ececec; }
+body.dark .btn-outline:hover { background: #ececec; color: #111; }
+body.dark .btn-dark { background: #ececec; color: #111; }
+body.dark .btn-dark:hover { background: #fff; }
+body.dark .socials a { background: #ececec; color: #111; }
+body.dark .socials svg { fill: #111; }
+body.dark .socials svg.ig { fill: none !important; stroke: #111; }
+body.dark .socials svg.ig .dot { fill: #111; }
+body.dark .check { background: #ececec; color: #111; }
+body.dark .filters button, body.dark .work-head .filters a, body.dark .back { background: transparent; color: #ececec; border-color: #555; }
+body.dark .filters button:hover, body.dark .filters button.active,
+body.dark .work-head .filters a:hover, body.dark .work-head .filters a.active,
+body.dark .back:hover { background: #ececec; color: #111; border-color: #ececec; }
+body.dark .subs button { background: #1c1c1c; color: #ddd; }
+body.dark .subs button:hover { background: #2a2a2a; }
+body.dark .subs button.active { background: #ececec; color: #111; }
+body.dark .m-item { background: #1c1c1c; }
+body.dark .m-item.missing { background: linear-gradient(135deg, #1e1e1e, #262626); color: #666; }
+body.dark .fx-theme { border-color: #555; }
+body.dark .fx-theme svg { stroke: #ececec; }
+body.dark .fx-theme:hover { background: #ececec; }
+body.dark .fx-theme:hover svg { stroke: #111; }
+
+@media (max-width: 700px) {
+  .nav .fx-right .nav-links { display: none; }
+  .fx-theme { width: 36px; height: 36px; }
+  .nav .fx-right { gap: .9rem; }
+  .nav > .logo { font-size: 1.3rem; }
+}
+
+/* ---------- RESPECT "REDUCE MOTION" ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .fx-grain { animation: none; }
+  .fx-split .fx-w > span, .fx-fade { transition: none; transform: none; opacity: 1; }
+}
