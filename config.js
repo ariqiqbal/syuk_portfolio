@@ -90,7 +90,7 @@ window.SITE = {
     {
       id: "event", type: "photo",
       title: "Event Photography", caption: "Weddings & events",
-      image: "images/work2.jpg",
+      image: "images/work2.jpeg",
       subs: [
         { id: "wedding",   name: "Wedding",   items: [
             { youtube: "https://youtu.be/wjRFVfU2EiE", caption: "Wedding Film" },
