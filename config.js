@@ -107,7 +107,7 @@ window.SITE = {
       id: "portrait", type: "photo",
       title: "Portrait Photography", caption: "People & personality",
       image: "images/portrait/1.jpeg",
-      folder: "images/portrait", count: 6, ext: "jpeg",
+      folder: "images/portrait", count: 57, ext: "jpeg",
     },
     {
       id: "vlog", type: "video",
