@@ -6,13 +6,13 @@
 // ============================================================
 
 window.SITE = {
-  name: "Syukran Hensem",
-  greeting: "Hello, I'm",
+  name: "Syukran Shalihin",
+  greeting: "Salam Anyeong Sawadikap",
   role: "Photographer, Videographer & Media Designer",
   cvFile: "cv.pdf",                       // put cv.pdf in the root folder
-  email: "syukran@example.com",
-  instagram: "https://instagram.com/your-username",
-  youtube: "https://youtube.com/@your-channel",   // leave "" to hide
+  email: "syukran4110@gmail.com",
+  instagram: "https://instagram.com/syukranshalihin_",
+  youtube: "https://youtube.com/@syukran1096",   // leave "" to hide
   behance: "",                                     // leave "" to hide
   linkedin: "",                                    // leave "" to hide
 
