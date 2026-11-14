@@ -69,7 +69,7 @@ window.SITE = {
     { type: "photo",  title: "Event Photography",   caption: "Weddings & events",       image: "images/work2.jpg", link: "" },
     { type: "photo",  title: "Product Photography", caption: "Clean product shots",     image: "images/work3.jpg", link: "" },
     { type: "video",  title: "Cinematic Vlog",      caption: "Travel & daily life",     image: "images/work4.jpg", link: "" },
-    { type: "video",  title: "Short Film",          caption: "Story & editing",         image: "images/work5.jpg", link: "https://youtu.be/l15DBSmJp7k?si=XDxsNdLXI0bRdj8H" },
+    { type: "video",  title: "Short Film",          caption: "Story & editing",         image: "images/work5.jpeg", link: "https://youtu.be/l15DBSmJp7k?si=XDxsNdLXI0bRdj8H" },
     { type: "design", title: "Poster Design",       caption: "Events & social media",   image: "images/work6.jpg", link: "" },
   ],
 
