@@ -26,7 +26,7 @@ window.SITE = {
   // ---------- ABOUT ----------
   about: {
     cards: [
-      { title: "Experience", lines: ["X+ years Photography", "X+ years Videography"] },
+      { title: "Experience", lines: ["3+ years Photography", "2+ years Videography"] },
       { title: "Education", lines: ["Bachelor in Video Design", "Hanyang University Erica Campus"] },
     ],
     text:
