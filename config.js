@@ -125,7 +125,7 @@ window.SITE = {
     {
       id: "wedding-film", type: "video",
       title: "Wedding Film", caption: "Love stories on film",
-      image: "https://i.ytimg.com/vi/wjRFVfU2EiE/maxresdefault.jpg",
+      image: "images/wedding.jpg",
       items: [
         { youtube: "https://youtu.be/wjRFVfU2EiE", caption: "Wedding Film" },
       ],
