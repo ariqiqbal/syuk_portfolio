@@ -59,6 +59,9 @@ body.dark .fx-ring.label { background: #f2f2f2; border-color: #f2f2f2; color: #1
 .nav .fx-right { display: flex; align-items: center; gap: 1.2rem; }
 
 /* ---------- DARK MODE ---------- */
+.contact-box svg:not(.ig) { fill: currentColor; }
+.contact-box a { transition: color .3s; }
+body.dark .contact-box a:hover { color: #fff; opacity: .7; }
 body.dark { background: #0d0d0d; color: #ececec; }
 body.dark .small, body.dark .role, body.dark .about-text, body.dark .tile p, body.dark .skill p,
 body.dark .skill-box h3, body.dark #copy, body.dark .work-head p, body.dark .empty-msg,
