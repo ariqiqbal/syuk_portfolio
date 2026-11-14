@@ -123,6 +123,14 @@ window.SITE = {
       ],
     },
     {
+      id: "wedding-film", type: "video",
+      title: "Wedding Film", caption: "Love stories on film",
+      image: "https://i.ytimg.com/vi/wjRFVfU2EiE/maxresdefault.jpg",
+      items: [
+        { youtube: "https://youtu.be/wjRFVfU2EiE", caption: "Wedding Film" },
+      ],
+    },
+    {
       id: "poster", type: "design",
       title: "Poster Design", caption: "Events & social media",
       image: "images/poster/1.jpg",
