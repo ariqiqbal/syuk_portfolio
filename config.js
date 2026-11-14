@@ -6,7 +6,7 @@
 // ============================================================
 
 window.SITE = {
-  name: "Syukran Shalihin",
+  name: "Syukran Hensem",
   greeting: "Hello, I'm",
   role: "Photographer, Videographer & Media Designer",
   cvFile: "cv.pdf",                       // put cv.pdf in the root folder
