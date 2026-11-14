@@ -92,7 +92,7 @@ window.SITE = {
       image: "images/work2.jpg",
       subs: [
         { id: "wedding",   name: "Wedding",   folder: "images/event/wedding",   count: 6 },
-        { id: "concert",   name: "Concert",   folder: "images/concert",         count: 6 },
+        { id: "concert",   name: "Concert",   folder: "images/event/concert",   count: 6, ext: "jpeg" },
         { id: "corporate", name: "Corporate", folder: "images/event/corporate", count: 6 },
         { id: "other",     name: "Other",     folder: "images/event/other",     count: 6 },
       ],
