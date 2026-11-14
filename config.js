@@ -31,7 +31,7 @@ window.SITE = {
     ],
     text:
       "I'm a visual storyteller who works with photos, video and design. I shoot events, " +
-      "products and everyday street moments, edit short films and vlogs, and design posters " +
+      " and everyday street moments, edit short films and vlogs, and design posters " +
       "and social media content. I love turning simple moments into images that people remember.",
   },
 
@@ -99,12 +99,6 @@ window.SITE = {
         { id: "corporate", name: "Corporate", folder: "images/event/corporate", count: 6 },
         { id: "other",     name: "Other",     folder: "images/event/other",     count: 6 },
       ],
-    },
-    {
-      id: "product", type: "photo",
-      title: "Product Photography", caption: "Clean product shots",
-      image: "images/work3.jpg",
-      folder: "images/product", count: 6,
     },
     {
       id: "portrait", type: "photo",
