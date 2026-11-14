@@ -46,8 +46,10 @@
       const isVideo = g.type === "video";
       const play = isVideo ? `<span class="play">▶</span>` : "";
       const tag = g.type ? `<span class="tag">${LABEL[g.type] || g.type}</span>` : "";
-      const btn = g.link ? `<a class="btn btn-outline view" href="${g.link}" target="_blank" rel="noopener">${isVideo ? "▶ Watch" : "View"}</a>` : "";
-      return `<div class="tile" data-type="${g.type || ""}"><div class="photo" data-photo="gallery.${i}">${play}</div>${tag}<h3>${g.title}</h3><p>${g.caption}</p>${btn}</div>`;
+      const id = encodeURIComponent(g.id || i);
+      return `<a class="tile" href="work.html?id=${id}" target="_blank" rel="noopener" data-type="${g.type || ""}">` +
+        `<div class="photo" data-photo="gallery.${i}">${play}</div>${tag}<h3>${g.title}</h3><p>${g.caption}</p>` +
+        `<span class="open-hint">${isVideo ? "▶ Watch all" : "View all"} ↗</span></a>`;
     }).join("");
 
   const LINKNAME = { instagram: "Instagram", youtube: "YouTube", behance: "Behance", linkedin: "LinkedIn", github: "GitHub" };

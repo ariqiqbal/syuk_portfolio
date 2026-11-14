@@ -24,3 +24,10 @@ This saves in YOUR browser only. For the live site, use `images/`.
 Each item in `config.js` has `type`: `photo`, `video` or `design`.
 - Filter buttons (All / Photography / Videography / Design) appear automatically.
 - `video` items show a ▶ icon. Put the YouTube/Instagram link in `link` → "▶ Watch" button.
+
+## Category pages (work.html)
+Click a gallery card → new tab with ALL photos/videos of that category.
+- Photos: put numbered files in a folder, e.g. `images/street/1.jpg, 2.jpg …`
+  and set `folder` + `count` in `config.js`.
+- Videos: add `{ youtube: "https://youtu.be/..." }` or `{ video: "videos/x.mp4" }` to `items`.
+- Click a photo → full-screen viewer (← → keys, swipe on phone, Esc to close).

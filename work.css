@@ -1,0 +1,72 @@
+/* ===== Category page (work.html) ===== */
+.work-page .nav { height: 12vh; }
+.back { font-weight: 500; padding: .55rem 1.2rem; border: 1px solid #353535; border-radius: 2rem; transition: .2s; }
+.back:hover { background: #353535; color: #fff; }
+
+.work-head { text-align: center; max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 1rem; }
+.work-head h1 { font-size: 3rem; margin: .4rem 0 .2rem; }
+.work-head p { color: #666; }
+.work-head .count { font-size: .85rem; margin: .4rem 0 1.6rem; }
+.work-head .filters { margin: 0; }
+.work-head .filters a { font: 500 .85rem Poppins; padding: .45rem 1.1rem; border-radius: 2rem;
+  border: 1px solid #353535; transition: .2s; }
+.work-head .filters a:hover, .work-head .filters a.active { background: #353535; color: #fff; }
+
+.work-main { max-width: 1300px; margin: 0 auto; padding: 2rem 1.5rem 6rem; }
+
+/* photos: masonry */
+.masonry { columns: 3 320px; column-gap: 1.2rem; }
+.m-item { break-inside: avoid; margin-bottom: 1.2rem; border-radius: 1.2rem; overflow: hidden;
+  cursor: zoom-in; position: relative; background: #eee; display: block; }
+.m-item img { width: 100%; display: block; transition: transform .5s; }
+.m-item:hover img { transform: scale(1.04); }
+.m-item figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.5rem .9rem .7rem;
+  color: #fff; font-size: .85rem; background: linear-gradient(transparent, rgba(0,0,0,.65));
+  opacity: 0; transition: opacity .3s; }
+.m-item:hover figcaption { opacity: 1; }
+.m-item.missing { aspect-ratio: 4/3; cursor: default; display: grid; place-items: center;
+  background: linear-gradient(135deg,#ececec,#d9d9d9); color: #888; font-size: .8rem; text-align: center; padding: 1rem; }
+.m-item.missing:nth-child(3n+2) { aspect-ratio: 3/4; }
+.m-item.missing:nth-child(4n+3) { aspect-ratio: 1/1; }
+
+/* videos */
+.vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 1.6rem; }
+.v-item { border: 1px solid #ddd; border-radius: 1.4rem; overflow: hidden; background: #fafafa; }
+.v-frame { position: relative; aspect-ratio: 16/9; background: #111; }
+.v-frame iframe, .v-frame video, .v-frame img { position: absolute; inset: 0; width: 100%; height: 100%;
+  border: 0; object-fit: cover; }
+.v-thumb { cursor: pointer; }
+.v-thumb .play { width: 64px; height: 64px; font-size: 1.3rem; }
+.v-thumb:hover .play { transform: scale(1.12); }
+.v-item p { padding: .9rem 1.1rem; font-weight: 500; }
+.v-link { display: grid; place-items: center; color: #fff; font-weight: 600; gap: .5rem; }
+
+.empty-msg { text-align: center; color: #777; padding: 3rem 0; }
+
+/* lightbox */
+.lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(10,10,10,.95);
+  display: flex; align-items: center; justify-content: center; }
+.lightbox[hidden] { display: none; }
+.lightbox figure { max-width: 90vw; max-height: 88vh; text-align: center; }
+.lightbox img { max-width: 90vw; max-height: 80vh; object-fit: contain; border-radius: .6rem;
+  animation: lbIn .25s ease; }
+@keyframes lbIn { from { opacity: 0; transform: scale(.97); } }
+.lightbox figcaption { color: #ddd; margin-top: .8rem; font-size: .95rem; }
+.lb-close, .lb-nav { position: absolute; background: rgba(255,255,255,.1); color: #fff; border: 0;
+  cursor: pointer; border-radius: 50%; transition: background .2s; }
+.lb-close:hover, .lb-nav:hover { background: rgba(255,255,255,.25); }
+.lb-close { top: 1.2rem; right: 1.2rem; width: 44px; height: 44px; font-size: 1.1rem; }
+.lb-nav { top: 50%; transform: translateY(-50%); width: 54px; height: 54px; font-size: 2rem; line-height: 1; }
+.lb-prev { left: 1.2rem; } .lb-next { right: 1.2rem; }
+.lb-count { position: absolute; top: 1.6rem; left: 1.6rem; color: #aaa; font-size: .85rem; }
+
+@media (max-width: 700px) {
+  .work-head h1 { font-size: 2.1rem; }
+  .vgrid { grid-template-columns: 1fr; }
+  .masonry { columns: 2 150px; column-gap: .7rem; }
+  .m-item { margin-bottom: .7rem; border-radius: .8rem; }
+  .lb-nav { width: 42px; height: 42px; font-size: 1.5rem; }
+  .lb-prev { left: .4rem; } .lb-next { right: .4rem; }
+  .back { font-size: .8rem; padding: .45rem .9rem; }
+  .work-page .nav .logo { font-size: 1.2rem; }
+}

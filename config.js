@@ -2,7 +2,7 @@
 //  EDIT THIS FILE TO CUSTOMIZE THE PORTFOLIO
 //  1. Put photos in the /images folder.
 //  2. Change the file names below to match the photos.
-//  3. Change the text. Save. Redeploy to Vercel.
+//  3. Change the text. Save. Push to GitHub → Vercel updates.
 // ============================================================
 
 window.SITE = {
@@ -62,15 +62,65 @@ window.SITE = {
   ],
 
   // ---------- GALLERY ----------
-  // type: "photo" | "video" | "design"  (used by the filter buttons)
-  // link: optional. For videos, put the YouTube / Instagram link → shows a ▶ play button.
+  // Each card opens its own page in a new tab with ALL its photos / videos.
+  //
+  //   id     : short name, used in the link (no spaces)
+  //   type   : "photo" | "video" | "design"   (for the filter buttons)
+  //   image  : cover photo on the card
+  //
+  // PHOTOS — easiest way: put numbered files in a folder
+  //   folder: "images/street", count: 12   →  loads 1.jpg, 2.jpg … 12.jpg
+  //   (all must be .jpg; or set ext: "png")
+  //
+  // OR list files one by one (any names, can add a caption):
+  //   items: [ "images/street/tokyo.jpg", { src: "images/street/seoul.jpg", caption: "Seoul, 2025" } ]
+  //
+  // VIDEOS — list them in items:
+  //   { youtube: "https://youtu.be/XXXXXXXXXXX", caption: "My vlog" }
+  //   { video: "videos/film.mp4", poster: "images/film-cover.jpg", caption: "Short film" }
+  //   { link: "https://instagram.com/reel/...", caption: "Reel" }   ← opens in a new tab
   gallery: [
-    { type: "photo",  title: "Street Photography",  caption: "Everyday moments",        image: "images/work1.jpg", link: "" },
-    { type: "photo",  title: "Event Photography",   caption: "Weddings & events",       image: "images/work2.jpg", link: "" },
-    { type: "photo",  title: "Product Photography", caption: "Clean product shots",     image: "images/work3.jpg", link: "" },
-    { type: "video",  title: "Cinematic Vlog",      caption: "Travel & daily life",     image: "images/work4.jpg", link: "" },
-    { type: "video",  title: "Short Film",          caption: "Story & editing",         image: "images/work5.jpeg", link: "https://youtu.be/l15DBSmJp7k?si=XDxsNdLXI0bRdj8H" },
-    { type: "design", title: "Poster Design",       caption: "Events & social media",   image: "images/work6.jpg", link: "" },
+    {
+      id: "street", type: "photo",
+      title: "Street Photography", caption: "Everyday moments",
+      image: "images/work1.jpg",
+      folder: "images/street", count: 9,
+    },
+    {
+      id: "event", type: "photo",
+      title: "Event Photography", caption: "Weddings & events",
+      image: "images/work2.jpg",
+      folder: "images/event", count: 9,
+    },
+    {
+      id: "product", type: "photo",
+      title: "Product Photography", caption: "Clean product shots",
+      image: "images/work3.jpg",
+      folder: "images/product", count: 6,
+    },
+    {
+      id: "vlog", type: "video",
+      title: "Cinematic Vlog", caption: "Travel & daily life",
+      image: "images/work4.jpg",
+      items: [
+        { youtube: "https://youtu.be/VIDEO_ID_1", caption: "Vlog 1" },
+        { youtube: "https://youtu.be/VIDEO_ID_2", caption: "Vlog 2" },
+      ],
+    },
+    {
+      id: "film", type: "video",
+      title: "Short Film", caption: "Story & editing",
+      image: "images/work5.jpeg",
+      items: [
+        { youtube: "https://youtu.be/l15DBSmJp7k", caption: "Short film 1" },
+      ],
+    },
+    {
+      id: "poster", type: "design",
+      title: "Poster Design", caption: "Events & social media",
+      image: "images/work6.jpg",
+      folder: "images/poster", count: 6,
+    },
   ],
 
   footer: "All Rights Reserved.",
