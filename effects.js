@@ -8,7 +8,7 @@ const FX = {
   parallax: true,      // profile + about photos move slower when scrolling
   grain: true,         // light film-grain texture
   darkToggle: true,    // ☾ / ☀ button in the menu
-  defaultTheme: "auto" // "light" | "dark" | "auto" (follows the visitor's phone/computer)
+  defaultTheme: "dark" // "light" | "dark" | "auto" (follows the visitor's phone/computer)
 };
 
 (function () {
