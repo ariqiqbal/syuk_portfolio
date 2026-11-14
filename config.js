@@ -131,7 +131,7 @@ window.SITE = {
       id: "poster", type: "design",
       title: "Poster Design", caption: "Events & social media",
       image: "images/poster/1.jpg",
-      folder: "images/poster", count: 3,
+      folder: "images/poster", count: 4,
     },
     {
       id: "motion", type: "motion",
