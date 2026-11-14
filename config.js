@@ -12,6 +12,7 @@ window.SITE = {
   cvFile: "cv.pdf",                       // put cv.pdf in the root folder
   email: "syukran4110@gmail.com",
   instagram: "https://instagram.com/syukranshalihin_",
+  tiktok: "https://www.tiktok.com/@tiamo1104",
   youtube: "https://youtube.com/@syukran1096",   // leave "" to hide
   behance: "",                                     // leave "" to hide
   linkedin: "",                                    // leave "" to hide
@@ -25,8 +26,8 @@ window.SITE = {
   // ---------- ABOUT ----------
   about: {
     cards: [
-      { icon: "📷", title: "Experience", lines: ["X+ years Photography", "X+ years Videography"] },
-      { icon: "🎓", title: "Education", lines: ["Your Degree", "Your University"] },
+      { title: "Experience", lines: ["X+ years Photography", "X+ years Videography"] },
+      { title: "Education", lines: ["Bachelor in Video Design", "Hanyang University Erica Campus"] },
     ],
     text:
       "I'm a visual storyteller who works with photos, video and design. I shoot events, " +

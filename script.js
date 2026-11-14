@@ -9,6 +9,7 @@
     instagram: '<svg class="ig" viewBox="0 0 24 24"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4"/><circle cx="12" cy="12" r="4.4"/><circle class="dot" cx="17.5" cy="6.5" r="1.2"/></svg>',
     youtube: '<svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z"/></svg>',
     behance: '<svg viewBox="0 0 24 24"><path d="M8.2 11.4c.9-.4 1.5-1.2 1.5-2.4 0-2.3-1.7-2.9-3.7-2.9H0v12h6.2c2.3 0 4.5-1.1 4.5-3.7 0-1.6-.8-2.7-2.5-3zM2.7 8.2h2.6c1 0 1.9.3 1.9 1.4 0 1.1-.7 1.5-1.7 1.5H2.7zm3 7.7h-3v-3.3h3c1.2 0 2 .5 2 1.7 0 1.3-.9 1.6-2 1.6zM15.5 6.9h5.4v1.3h-5.4zM23.9 14c0-2.6-1.5-4.7-4.2-4.7-2.6 0-4.4 2-4.4 4.6 0 2.7 1.7 4.6 4.4 4.6 2.1 0 3.4-.9 4-2.9h-2.1c-.2.7-1.1 1.1-1.8 1.1-1.3 0-2-.8-2-2.1h6.1V14zm-6.1-1c.1-1.1.8-1.8 1.9-1.8 1.2 0 1.7.7 1.8 1.8z"/></svg>',
+    tiktok: '<svg viewBox="0 0 24 24"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.4 6.4 0 1 0 5.4 6.3V8.6a8 8 0 0 0 4.7 1.5V6.7a4.7 4.7 0 0 1-4.7-4.7z"/></svg>',
     email: '<svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4 7.3V17h16V7.3z"/></svg>',
   };
 
@@ -18,7 +19,7 @@
   $("#cv-btn").href = S.cvFile;
   $("#copy").textContent = `Copyright © ${new Date().getFullYear()} ${S.name}. ${S.footer}`;
 
-  const socials = ["instagram", "youtube", "behance", "linkedin", "github"].filter((k) => S[k]);
+  const socials = ["instagram", "tiktok", "youtube", "behance", "linkedin", "github"].filter((k) => S[k]);
   $("#hero-socials").innerHTML = socials
     .map((k) => `<a href="${S[k]}" target="_blank" rel="noopener" aria-label="${k}">${ICON[k]}</a>`).join("");
 
@@ -52,7 +53,7 @@
         `<span class="open-hint">${isVideo ? "▶ Watch all" : "View all"} ↗</span></a>`;
     }).join("");
 
-  const LINKNAME = { instagram: "Instagram", youtube: "YouTube", behance: "Behance", linkedin: "LinkedIn", github: "GitHub" };
+  const LINKNAME = { instagram: "Instagram", tiktok: "TikTok", youtube: "YouTube", behance: "Behance", linkedin: "LinkedIn", github: "GitHub" };
   $("#contact-box").innerHTML =
     `<a href="mailto:${S.email}">${ICON.email}<span>${S.email}</span></a>` +
     socials.map((k) => `<a href="${S[k]}" target="_blank" rel="noopener">${ICON[k]}<span>${LINKNAME[k]}</span></a>`).join("");
