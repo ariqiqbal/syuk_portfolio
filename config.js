@@ -75,6 +75,10 @@ window.SITE = {
   // OR list files one by one (any names, can add a caption):
   //   items: [ "images/street/tokyo.jpg", { src: "images/street/seoul.jpg", caption: "Seoul, 2025" } ]
   //
+  // SUB-FILTERS (optional) — split one card into smaller groups:
+  //   subs: [ { id: "wedding", name: "Wedding", folder: "images/event/wedding", count: 6 }, … ]
+  //   Each sub can use folder+count OR items: [...] (photos or videos).
+  //
   // VIDEOS — list them in items:
   //   { youtube: "https://youtu.be/XXXXXXXXXXX", caption: "My vlog" }
   //   { video: "videos/film.mp4", poster: "images/film-cover.jpg", caption: "Short film" }
@@ -84,12 +88,15 @@ window.SITE = {
       id: "street", type: "photo",
       title: "Street Photography", caption: "Everyday moments",
       image: "images/work1.jpg",
-      folder: "images/street", count: 9,
+      folder: "images/street", count: 12,
     },
     {
       id: "event", type: "photo",
       title: "Event Photography", caption: "Weddings & events",
       image: "images/work2.jpg",
+      // SUB-FILTERS: chips on the Event page. Rename = change "name".
+      // Add / remove a line to add / remove a chip.
+      // Each one has its own folder: images/event/wedding/1.jpg, 2.jpg …
       subs: [
         { id: "wedding",   name: "Wedding",   folder: "images/event/wedding",   count: 6 },
         { id: "concert",   name: "Concert",   folder: "images/event/concert",   count: 6 },
