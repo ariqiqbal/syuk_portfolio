@@ -104,6 +104,12 @@ window.SITE = {
       folder: "images/product", count: 6,
     },
     {
+      id: "portrait", type: "photo",
+      title: "Portrait Photography", caption: "People & personality",
+      image: "images/portrait/1.jpeg",
+      folder: "images/portrait", count: 6, ext: "jpeg",
+    },
+    {
       id: "vlog", type: "video",
       title: "Cinematic Vlog", caption: "Travel & daily life",
       image: "images/work4.jpg",
