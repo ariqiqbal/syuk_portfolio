@@ -3,7 +3,7 @@
 //  Turn an effect off: change true → false below.
 // ============================================================
 const FX = {
-  cursor: true,        // custom circle cursor (computer only, not phones)
+  cursor: false,        // custom circle cursor (computer only, not phones)
   textReveal: true,    // titles slide up word by word
   parallax: true,      // profile + about photos move slower when scrolling
   grain: true,         // light film-grain texture
