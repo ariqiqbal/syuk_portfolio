@@ -92,7 +92,9 @@ window.SITE = {
       title: "Event Photography", caption: "Weddings & events",
       image: "images/work2.jpg",
       subs: [
-        { id: "wedding",   name: "Wedding",   folder: "images/event/wedding",   count: 6 },
+        { id: "wedding",   name: "Wedding",   items: [
+            { youtube: "https://youtu.be/wjRFVfU2EiE", caption: "Wedding Film" },
+          ] },
         { id: "concert",   name: "Concert",   folder: "images/event/concert",   count: 6, ext: "jpeg" },
         { id: "corporate", name: "Corporate", folder: "images/event/corporate", count: 6 },
         { id: "other",     name: "Other",     folder: "images/event/other",     count: 6 },
@@ -114,9 +116,8 @@ window.SITE = {
       id: "vlog", type: "video",
       title: "Cinematic Vlog", caption: "Travel & daily life",
       image: "images/work4.jpg",
-      items: [
-        { youtube: "https://youtu.be/VIDEO_ID_1", caption: "Vlog 1" },
-        { youtube: "https://youtu.be/VIDEO_ID_2", caption: "Vlog 2" },
+            items: [
+        { youtube: "https://youtu.be/FoXcrAMCwA8", caption: "Cinematic Vlog" },
       ],
     },
     {
@@ -131,7 +132,8 @@ window.SITE = {
       id: "poster", type: "design",
       title: "Poster Design", caption: "Events & social media",
       image: "images/poster/1.jpg",
-      folder: "images/poster", count: 4,
+      folder: "images/poster", count: 6,
+      items: [ "images/poster/7.png" ],
     },
     {
       id: "motion", type: "motion",
