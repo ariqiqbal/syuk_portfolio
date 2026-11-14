@@ -85,12 +85,12 @@ window.SITE = {
       id: "street", type: "photo",
       title: "Street Photography", caption: "Everyday moments",
       image: "images/work1.jpg",
-      folder: "images/street", count: 9,
+      folder: "images/street", count: 7,
     },
     {
       id: "event", type: "photo",
       title: "Event Photography", caption: "Weddings & events",
-      image: "images/work2.jpg",
+      image: "images/work2.jpeg",
       subs: [
         { id: "wedding",   name: "Wedding",   items: [
             { youtube: "https://youtu.be/wjRFVfU2EiE", caption: "Wedding Film" },
