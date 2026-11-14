@@ -20,7 +20,7 @@ window.SITE = {
   // ---------- PHOTOS ----------
   photos: {
     profile: "images/profile.jpg",        // round photo at the top
-    about: "images/about.jpg",            // photo in "About Me"
+    about: "images/about.jpeg",            // photo in "About Me"
   },
 
   // ---------- ABOUT ----------
