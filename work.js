@@ -2,7 +2,7 @@
   const S = window.SITE;
   const $ = (q) => document.querySelector(q);
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  const LABEL = { photo: "Photography", video: "Videography", design: "Design" };
+  const LABEL = { photo: "Photography", video: "Videography", design: "Design", motion: "Motion Graphics" };
 
   // ---------- find the chosen category ----------
   const id = new URLSearchParams(location.search).get("id") || (location.hash || "").slice(1);

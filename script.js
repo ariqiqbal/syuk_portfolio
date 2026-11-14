@@ -24,7 +24,7 @@
     .map((k) => `<a href="${S[k]}" target="_blank" rel="noopener" aria-label="${k}">${ICON[k]}</a>`).join("");
 
   $("#about-cards").innerHTML = S.about.cards
-    .map((c) => `<div class="card"><div class="icon">${c.icon}</div><h3>${c.title}</h3>${c.lines.map((l) => `<p>${l}</p>`).join("")}</div>`).join("");
+    .map((c) => `<div class="card">${c.icon ? `<div class="icon">${c.icon}</div>` : ""}<h3>${c.title}</h3>${c.lines.map((l) => `<p>${l}</p>`).join("")}</div>`).join("");
 
   $("#skills").innerHTML = S.skills
     .map((g) => `<div class="skill-box"><h3>${g.title}</h3><div class="skill-list">${g.items
@@ -32,7 +32,7 @@
 
   // gallery filter buttons
   const types = [...new Set(S.gallery.map((g) => g.type).filter(Boolean))];
-  const LABEL = { photo: "Photography", video: "Videography", design: "Design" };
+  const LABEL = { photo: "Photography", video: "Videography", design: "Design", motion: "Motion Graphics" };
   $("#filters").innerHTML = types.length > 1
     ? ["all", ...types].map((t) => `<button class="${t === "all" ? "active" : ""}" data-f="${t}">${t === "all" ? "All" : LABEL[t] || t}</button>`).join("")
     : "";
@@ -44,7 +44,7 @@
 
   $("#grid").innerHTML = S.gallery
     .map((g, i) => {
-      const isVideo = g.type === "video";
+      const isVideo = g.type === "video" || g.type === "motion";
       const play = isVideo ? `<span class="play">▶</span>` : "";
       const tag = g.type ? `<span class="tag">${LABEL[g.type] || g.type}</span>` : "";
       const id = encodeURIComponent(g.id || i);

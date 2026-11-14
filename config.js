@@ -130,8 +130,18 @@ window.SITE = {
     {
       id: "poster", type: "design",
       title: "Poster Design", caption: "Events & social media",
-      image: "images/work6.jpg",
-      folder: "images/poster", count: 6,
+      image: "images/poster/1.jpg",
+      folder: "images/poster", count: 3,
+    },
+    {
+      id: "motion", type: "motion",
+      title: "Motion Graphics", caption: "Moving typography & animated design",
+      image: "images/motion/1.jpg",
+      items: [
+        { video: "images/motion/1.mp4", poster: "images/motion/1.jpg", caption: "Moving Typography" },
+        { video: "images/motion/2.mp4", poster: "images/motion/2.jpg", caption: "Moving Poster" },
+        { video: "images/motion/3.mp4", poster: "images/motion/3.jpg", caption: "Website Mock-up" },
+      ],
     },
   ],
 

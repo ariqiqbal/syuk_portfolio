@@ -35,6 +35,7 @@
 .v-frame { position: relative; aspect-ratio: 16/9; background: #111; }
 .v-frame iframe, .v-frame video, .v-frame img { position: absolute; inset: 0; width: 100%; height: 100%;
   border: 0; object-fit: cover; }
+.v-frame video { object-fit: contain; background: #000; }
 .v-thumb { cursor: pointer; }
 .v-thumb .play { width: 64px; height: 64px; font-size: 1.3rem; }
 .v-thumb:hover .play { transform: scale(1.12); }

@@ -1,2 +1,4 @@
 .DS_Store
 Thumbs.db
+# original big videos (compressed copies are in images/motion/)
+images/motion graphic/
