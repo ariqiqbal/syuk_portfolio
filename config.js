@@ -109,7 +109,7 @@ window.SITE = {
     {
       id: "vlog", type: "video",
       title: "Cinematic Vlog", caption: "Travel & daily life",
-      image: "images/work4.jpg",
+      image: "images/work4.jpeg",
             items: [
         { youtube: "https://youtu.be/FoXcrAMCwA8", caption: "Cinematic Vlog" },
       ],
