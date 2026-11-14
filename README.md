@@ -31,3 +31,10 @@ Click a gallery card → new tab with ALL photos/videos of that category.
   and set `folder` + `count` in `config.js`.
 - Videos: add `{ youtube: "https://youtu.be/..." }` or `{ video: "videos/x.mp4" }` to `items`.
 - Click a photo → full-screen viewer (← → keys, swipe on phone, Esc to close).
+
+## Sub-filters (Event → Wedding / Concert …)
+In `config.js`, a gallery item can have `subs`:
+  { id: "wedding", name: "Wedding", folder: "images/event/wedding", count: 6 }
+- Rename a chip: change `name`.
+- Add/remove a chip: add/remove a line.
+- Photos: images/event/wedding/1.jpg, 2.jpg …  (set `count`)

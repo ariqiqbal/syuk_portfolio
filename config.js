@@ -84,13 +84,18 @@ window.SITE = {
       id: "street", type: "photo",
       title: "Street Photography", caption: "Everyday moments",
       image: "images/work1.jpg",
-      folder: "images/street", count: 12,
+      folder: "images/street", count: 9,
     },
     {
       id: "event", type: "photo",
       title: "Event Photography", caption: "Weddings & events",
       image: "images/work2.jpg",
-      folder: "images/event", count: 9,
+      subs: [
+        { id: "wedding",   name: "Wedding",   folder: "images/event/wedding",   count: 6 },
+        { id: "concert",   name: "Concert",   folder: "images/event/concert",   count: 6 },
+        { id: "corporate", name: "Corporate", folder: "images/event/corporate", count: 6 },
+        { id: "other",     name: "Other",     folder: "images/event/other",     count: 6 },
+      ],
     },
     {
       id: "product", type: "photo",

@@ -41,6 +41,17 @@
 .v-item p { padding: .9rem 1.1rem; font-weight: 500; }
 .v-link { display: grid; place-items: center; color: #fff; font-weight: 600; gap: .5rem; }
 
+/* sub-filters (Wedding / Concert …) */
+.subs { display: flex; justify-content: center; flex-wrap: wrap; gap: .5rem; margin: 0 0 2rem; }
+.subs[hidden] { display: none; }
+.subs button { font: 500 .95rem Poppins; padding: .55rem 1.3rem; border-radius: 2rem; cursor: pointer;
+  border: 0; background: #f0f0f0; color: #333; transition: .2s; }
+.subs button span { font-size: .75rem; opacity: .55; margin-left: .2rem; }
+.subs button:hover { background: #e2e2e2; }
+.subs button.active { background: #111; color: #fff; }
+.subs button.active span { opacity: .8; }
+.m-item[hidden], .v-item[hidden] { display: none; }
+
 .empty-msg { text-align: center; color: #777; padding: 3rem 0; }
 
 /* lightbox */
